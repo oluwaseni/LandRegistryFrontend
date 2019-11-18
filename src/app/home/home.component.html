@@ -1,0 +1,29 @@
+<ul class="nav justify-content-end ml-2" style="border-bottom: solid rgb(10, 2, 48) 1px; box-shadow: 2px 2px 2px 2px rgb(19, 8, 73); ">
+    <li class="nav-item">
+      <a class="nav-link" href="#"  style="color: rgb(10, 2, 48) !important;">Sign Out</a>
+    </li>
+   
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" style="color: rgb(10, 2, 48);">First Bank</a>
+    </li>
+  </ul>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a (click)="openDashboard()"><i class="fa fa-fw fa-home"></i> Dashboard</a>
+    <hr>
+    <a (click)="openMortgage()"><i class="fa fa-fw fa-wrench"></i> Mortgage</a>
+    <a (click)="openPayment()"><i class="fa fa-fw fa-user"></i> Payment</a>
+    <a (click)="openDeeds()" ><i class="fa fa-fw fa-envelope"></i> Deeds </a>
+    <hr>
+    <a (click)="openAbout()"><i class="fa fa-fw fa-envelope"></i> About</a>
+  </div>
+  
+  <!-- Use any element to open the sidenav -->
+  <span (click)="openNav()"><i class="fa fa-fw fa-bars ml-2" style="position:absolute; top: 15px;"></i></span>
+  
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main">
+    <router-outlet></router-outlet>
+
+  </div>
